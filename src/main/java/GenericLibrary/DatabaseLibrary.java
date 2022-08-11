@@ -20,7 +20,7 @@ public class DatabaseLibrary implements IConstants {
 	{ 
 		driverRef=new Driver();
 		DriverManager.registerDriver(driverRef);
-		DriverManager.getConnection(dbURL,dbUserName,dbPassword);
+		con=DriverManager.getConnection(dbURL,dbUserName,dbPassword);
 		
 	}
 /**
@@ -42,7 +42,7 @@ public class DatabaseLibrary implements IConstants {
 	public String readDataFromDBAndValidate(String query,int columnIndex,String expData) throws SQLException
 	{
 		boolean flag=false;
-		ResultSet result = con.createStatement().executeQuery(expData);
+		ResultSet result = con.createStatement().executeQuery(query);
 		while(result.next())
 		{
 			if(result.getString(columnIndex).equalsIgnoreCase(expData))
