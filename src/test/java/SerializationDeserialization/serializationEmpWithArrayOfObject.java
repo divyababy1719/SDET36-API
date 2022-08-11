@@ -22,5 +22,6 @@ public class serializationEmpWithArrayOfObject {
 		EmployeeDetailsWithArrayOfObject emp=new EmployeeDetailsWithArrayOfObject("sdg", "ds", id, new SpouseDetails("xzx", 478555555l, "tcs"));
 	    ObjectMapper obj=new ObjectMapper();
 	    obj.writeValue(new File("./EmployeeWithObjArray.json"), emp);
+	    
 	}
 }

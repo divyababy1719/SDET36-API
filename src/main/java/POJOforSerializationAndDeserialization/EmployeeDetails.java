@@ -22,10 +22,7 @@ public EmployeeDetails(String eName, String eId, int phone, String email, String
 
 //empty constructor for deserialization
 
-public EmployeeDetails() 
-{
-	
-}
+
 //Rule 3: provide getteres and setters
 
 public String geteName() {
